@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from './background.jpeg';
+import React from 'react';
+import './App.css'; // Assumindo que você tem um arquivo CSS para estilização
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="login-container">
+
+        <div className="background-image">
+          <img src={logo} alt="Background Top" className="background-top" />
+
+          <img src={logo} alt="Background Bottom" className="background-bottom" />
+        </div>
+
+        <div className="login-box">
+          <form>
+            <label htmlFor="login">Login:</label>
+            <input type="text" id="login" name="login" />
+            
+            <label htmlFor="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" />
+            
+            <button type="submit">Login</button>
+          </form>
+
+          <div className="icon">
+            <span role="img" aria-label="key">🔑</span>
+          </div>
+        </div>
     </div>
   );
 }
 
-export default App;
